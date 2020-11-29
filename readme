@@ -1,0 +1,10 @@
+#Install packages
+sudo yum update -y
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+sudo yum install -y httpd mariadb-server
+sudo systemctl start httpd
+
+##Create a Database and table
+CREATE DATABASE intel;
+
+CREATE TABLE data (firstname varchar(20),email varchar(20));
